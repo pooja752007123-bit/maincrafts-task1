@@ -44,6 +44,7 @@ nav a{
   background:white;
   padding:10px;
   top:25px;
+  min-width:150px;
 }
 
 .dropdown:hover .dropdown-menu{
@@ -59,19 +60,25 @@ nav a{
   text-align:center;
   color:white;
   background:linear-gradient(135deg,#4f46e5,#06b6d4);
+  padding:20px;
 }
 
 .hero h1{
-  font-size:3rem;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+
+.hero p{
+  margin-bottom:20px;
 }
 
 .btn{
-  margin-top:20px;
   background:white;
   color:#4f46e5;
   padding:12px 25px;
   border-radius:25px;
   text-decoration:none;
+  font-weight:bold;
 }
 
 .features{
@@ -88,8 +95,8 @@ nav a{
 
 .card{
   padding:20px;
-  box-shadow:0 3px 10px rgba(0,0,0,0.1);
   border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 footer{
@@ -97,4 +104,17 @@ footer{
   color:white;
   text-align:center;
   padding:20px;
+}
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+  }
+
+  nav ul{
+    flex-direction:column;
+    text-align:center;
+  }
+
 }

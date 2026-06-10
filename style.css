@@ -45,6 +45,7 @@ nav a{
   padding:10px;
   top:25px;
   min-width:150px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 .dropdown:hover .dropdown-menu{
@@ -79,6 +80,11 @@ nav a{
   border-radius:25px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s ease;
+}
+
+.btn:hover{
+  transform:scale(1.03);
 }
 
 .features{
@@ -97,6 +103,13 @@ nav a{
   padding:20px;
   border-radius:10px;
   box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  transition:all 0.3s ease;
+  background:white;
+}
+
+.card:hover{
+  transform:scale(1.03);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
 footer{

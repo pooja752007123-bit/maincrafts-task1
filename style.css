@@ -9,19 +9,21 @@ body{
   background:#f5f5f5;
 }
 
+/* Navbar */
+
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 50px;
-  background:#7c818a;
+  background:#111827;
   position:sticky;
   top:0;
   z-index:1000;
 }
 
 .logo{
-  font-size:32px;
+  font-size:30px;
   font-weight:bold;
   color:white;
 }
@@ -42,12 +44,18 @@ nav a{
   font-weight:600;
 }
 
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* Dropdown */
+
 .dropdown-menu{
   display:none;
   position:absolute;
-  background:white;
   top:30px;
   left:0;
+  background:white;
   min-width:180px;
   border-radius:10px;
   box-shadow:0 5px 15px rgba(0,0,0,0.15);
@@ -65,6 +73,8 @@ nav a{
   display:block;
 }
 
+/* Hero Section */
+
 .hero{
   height:85vh;
   display:flex;
@@ -73,10 +83,30 @@ nav a{
   align-items:center;
   text-align:center;
   color:white;
-  background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-  url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80');
-  background-size:cover;
-  background-position:center;
+  padding:20px;
+
+  background:linear-gradient(
+    -45deg,
+    #4f46e5,
+    #06b6d4,
+    #9333ea,
+    #ec4899
+  );
+
+  background-size:400% 400%;
+  animation:gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0% 50%;
+  }
 }
 
 .hero h1{
@@ -85,9 +115,11 @@ nav a{
 }
 
 .hero p{
-  font-size:1.3rem;
+  font-size:1.2rem;
   margin-bottom:25px;
 }
+
+/* Button */
 
 .btn{
   background:white;
@@ -100,18 +132,19 @@ nav a{
 }
 
 .btn:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
+
+/* Features */
 
 .features{
   padding:80px 20px;
   text-align:center;
-  background:#f7f7f7;
 }
 
 .features h2{
-  font-size:3rem;
-  margin-bottom:15px;
+  font-size:2.5rem;
+  margin-bottom:20px;
 }
 
 .cards{
@@ -120,6 +153,8 @@ nav a{
   gap:25px;
   margin-top:40px;
 }
+
+/* Cards */
 
 .card{
   background:white;
@@ -142,8 +177,9 @@ nav a{
 
 .card p{
   color:#666;
-  line-height:1.6;
 }
+
+/* Footer */
 
 footer{
   background:#111827;
@@ -155,6 +191,8 @@ footer{
 footer p{
   margin:5px 0;
 }
+
+/* Mobile */
 
 @media(max-width:768px){
 
@@ -177,4 +215,3 @@ footer p{
     font-size:1rem;
   }
 }
-

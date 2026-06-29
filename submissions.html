@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submissions</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions - MainCrafts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -22,11 +22,9 @@
 </header>
 
 <section class="contact-section">
-
     <h2>All Submissions</h2>
 
     <ul id="list"></ul>
-
 </section>
 
 <footer>
@@ -34,35 +32,28 @@
 </footer>
 
 <script>
-
 let submissions =
 JSON.parse(localStorage.getItem("contacts")) || [];
 
 let list = document.getElementById("list");
 
-submissions.forEach(function(item){
+submissions.forEach(function(item) {
 
-list.innerHTML += `
-<li style="
-background:white;
-padding:20px;
-margin:20px auto;
-max-width:700px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-list-style:none;">
+    list.innerHTML += `
+    <li style="background:white;
+               padding:20px;
+               margin:20px auto;
+               max-width:700px;
+               border-radius:10px;
+               box-shadow:0 2px 10px rgba(0,0,0,0.1);
+               list-style:none;">
 
-<strong>Name:</strong> ${item.name}<br><br>
+        <strong>Name:</strong> ${item.name}<br><br>
+        <strong>Email:</strong> ${item.email}<br><br>
+        <strong>Message:</strong> ${item.message}
 
-<strong>Email:</strong> ${item.email}<br><br>
-
-<strong>Message:</strong> ${item.message}
-
-</li>
-`;
-
+    </li>`;
 });
-
 </script>
 
 </body>

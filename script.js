@@ -1,13 +1,38 @@
-function validateForm() {
+const form = document.getElementById("contactForm");
 
-    let name = document.forms["contactForm"]["name"].value;
-    let email = document.forms["contactForm"]["email"].value;
+if(form){
 
-    if (name == "" || email == "") {
-        alert("Name and Email must be filled out!");
-        return false;
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    if(name === "" || email === "" || message === ""){
+
+        alert("All fields are required!");
+        return;
     }
 
+    let contacts =
+        JSON.parse(localStorage.getItem("contacts")) || [];
+
+    contacts.push({
+        name: name,
+        email: email,
+        message: message
+    });
+
+    localStorage.setItem(
+        "contacts",
+        JSON.stringify(contacts)
+    );
+
     alert("Form submitted successfully!");
-    return true;
+
+    form.reset();
+});
+
 }

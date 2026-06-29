@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - MainCrafts</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,27 +16,28 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="submissions.html">Submissions</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="features">
+<section class="contact-section">
+
     <h2>Contact Us</h2>
 
-    <form name="contactForm" onsubmit="return validateForm()"
-          style="max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;">
+    <form id="contactForm">
 
-        <input type="text" name="name" placeholder="Enter your name" style="padding:12px;">
+        <input type="text" id="name" placeholder="Enter Your Name">
 
-        <input type="email" name="email" placeholder="Enter your email" style="padding:12px;">
+        <input type="email" id="email" placeholder="Enter Your Email">
 
-        <textarea name="message" placeholder="Enter your message" rows="5" style="padding:12px;"></textarea>
+        <textarea id="message" rows="6"
+        placeholder="Enter Your Message"></textarea>
 
-        <button type="submit" class="btn">
-            Send Message
-        </button>
+        <button type="submit">Submit</button>
 
     </form>
+
 </section>
 
 <footer>
@@ -45,5 +48,3 @@
 
 </body>
 </html>
-
-
